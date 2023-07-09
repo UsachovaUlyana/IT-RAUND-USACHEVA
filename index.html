@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title class="lng-siteName">Расчет ИМТ</title>
+
+	</head>
+	<body>
+
+		<!--Шапка-->
+		<header>
+			<h2 class="header-title lng-headerTitle">
+				ИМТкалькулятор - узнайте индекс массы своего тела
+			</h2>
+			<select name="" id="change-lang" class="change-lang">
+				<option value="ru" selected>Русский</option>
+				<option value="eng">English</option>
+			</select>
+		</header>
+		<!--Конец шапки-->
+
+		<!--Основное содержимое-->
+		<div class="container">
+			<!--Блок с расчетом ИМТ-->
+			<div class="card calc-card">
+				<h2 class="card-title lng-calcCardTitle">Рсчет ИМТ</h2>
+				<form class="form" id="form">
+					<div class="block">
+						<h2 class="card-subtitle lng-subtitleWeight">Ваш вес</h2>
+						<div class="weight-input">
+							<input type="number" class="form-input lng-kg" placeholder="кг" id="weightInputOne">
+							<p class="point">.</p>
+							<input type="number" class="form-input lng-g" placeholder="г" id="weightInputTwo">
+						</div>
+					</div>
+					<div class="block">
+						<h2 class="card-subtitle lng-subtitleHeight">Ваш рост</h2>
+						<input type="number" class="form-input input-height lng-h" placeholder="см" id="heightInput">
+					</div>
+					<button type="submit" class="form-btn lng-formBtn">Рассчитать</button>
+					<div class="error" id="error">
+						<h4>Ошибка</h4>
+					</div>
+				</form>
+				<!--Карточка с инструкцией-->
+				<img id="iconInform" class="information-icon" src="./img/information.png" alt="I" width="22" height="22">
+				<div id="infoBlock" class="information-block card">
+					<h2 class="lng-titleInstruction">Как вводить данные?</h2>
+					<p class="lng-paragraphInstruction1">- В поля для ввода с надписями "кг" и "г" необходимо ввести значение вашего веса в килограммах с точностью до 1 десятой.</p>
+					<p class="lng-paragraphInstruction2">Пример №1: вес 52.2 кг. В первое поле вводим 52, во второе - 2.
+					<p class="lng-paragraphInstruction3">Пример №2: вес 68 кг ровно. В первое поле вводим 52, во второе - 0.
+					</p>
+					<p class="lng-paragraphInstruction4">- В поле для ввода с надписями "см" необходимо ввести значение вашего роста в сантиметрах.</p>
+					<p class="lng-paragraphInstruction5">Пример: рост 167 см. Вводим число 167.</p>
+				</div>
+				<!--Конец карточки с инструкцией-->
+			</div>
+			<!--Конец блока с расчетом ИМТ-->
+
+		<div>
+		<!--Блок с выводом результатов-->
+			<div class="card card-lg card-result">
+				<h2 class="card-title lng-result">Ваш ИМТ</h2>
+				<div class="result">
+					<h3 class="result-title BMI BMI-lg" id="resultBMINUm">__.__</h3>
+					<h3 class="result-title" id="resultBMIText">__.__</h3>
+				</div>
+			</div>
+		<!--Конец блока с выводом результатов-->
+			
+		<!--Блок с историей расчетов-->
+			<div class="card-history">
+				<h2 class="card-title lng-titleHistory">История</h2>
+			</div>
+				<ul id="resultsList">
+
+				</ul>
+				
+			</div>
+			<!--Конец блока с историей расчетов-->
+		</div>
+		<!--Конец онсовного содержимого-->
+		<script src="./js/lang.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
